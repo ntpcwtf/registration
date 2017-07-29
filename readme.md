@@ -12,3 +12,5 @@ A super-simple registration form with members area for NTPC made in Django...
 7. Profit?
 
 **Made with love by [Sycha design](https://sychadesign.com) and [vpsFREE.cz](https://vpsfree.cz)**
+
+*Published under the MIT license. (See license.md)*
