@@ -1,0 +1,6 @@
+.idea/
+*.pyc
+.env
+venv/
+*.sqlite3
+bower_components/

@@ -1,0 +1,59 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NTPC Registration</title>
+
+    <link rel="stylesheet" href="{% static 'bower_components/tether/dist/css/tether.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<div class="container" style="margin-top: 15px">
+    <div class="row">
+        <div class="col-lg-12">
+            <hr>
+
+            <h2 class="text-center">Registration successful!</h2>
+
+            <p class="lead">You have been successfully registered! You will receive a confirmation Email. We've also
+            subscribed you to the NTPC mailing list.
+
+                <br>
+                <br>
+
+                <span style="border: 1px solid rgba(1, 1, 1, .5); padding: 5px; font-weight: normal;">You have been assigned the ID: <b>{{ registered.username }}</b></span>
+
+                <br>
+                <br>
+
+                You will use the ID as your variable symbol when sending your payment. Without the ID, your payment might
+                take longer to process or might not be processed at all!
+
+                <br>
+                <br>
+
+                You can use the email and password you've entered to <a href="/login">log into the system</a> and check your entered information.
+            </p>
+
+            <br>
+
+
+            <hr>
+
+            <p>&copy; <a href="https://ntpc.wtf">ntpc</a>, 2017 <span style="float: right">Made by <a
+                    href="https://sychadesign.com">Sycha design.</a></span></p>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'bower_components/tether/dist/js/tether.min.js' %}"></script>
+<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

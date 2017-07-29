@@ -1,0 +1,74 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NTPC Registration</title>
+
+    <link rel="stylesheet" href="{% static 'bower_components/tether/dist/css/tether.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<div class="container" style="margin-top: 15px">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Members Area <span class="float-right"><a href="/logout">Log Out</a></span></h1>
+            <hr>
+            <p>
+                <b>Name:</b> {{ registration.fullname }}
+                <br>
+                <b>Email:</b> {{ user.email }}
+                <br>
+                <b>Payment ID:</b> {{ user.username }}
+                <br>
+                <b>Paid:</b> N/A (this data should be available in a few days)
+                <br>
+                <br>
+                <b>Days you need accommodation for:</b>
+                <br>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="stct" readonly {% if registration.stct %}checked{% endif %}>
+                        &nbsp;Wednesday - Thursday
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" name="ctpa" readonly {% if registration.ctpa %}checked{% endif %}>
+                        &nbsp;Thursday - Friday
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" name="paso" readonly {% if registration.paso %}checked{% endif %}>
+                        &nbsp;Friday - Saturday
+                    </label>
+
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" name="sone" readonly {% if registration.sone %}checked{% endif %}>
+                        &nbsp;Saturday - Sunday
+                    </label>
+                </div>
+            </p>
+
+            <p>&copy; <a href="https://ntpc.wtf">ntpc</a>, 2017 <span style="float: right">Made by <a
+                    href="https://sychadesign.com">Sycha design.</a></span></p>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'bower_components/tether/dist/js/tether.min.js' %}"></script>
+<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

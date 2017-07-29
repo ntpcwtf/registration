@@ -1,0 +1,7 @@
+brotlipy==0.7.0
+cffi==1.10.0
+Django==1.11.3
+enum34==1.1.6
+pycparser==2.18
+pytz==2017.2
+whitenoise==3.3.0
