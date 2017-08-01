@@ -113,15 +113,38 @@ def register(request):
 
     send_mail(
         subject='NTPC Registration',
-        message='You have been successfully registered to NTPC! You can log in over at https://reg.ntpc.wtf/login with '
-        'your email and password to review your information...',
         html_message='<h1>Welcome to NTPC!</h1>'
                      '<p>You have been successfully registered to NTPC!</p>'
-                     '<p>Your payment ID is ' + code + '</p>'
-                     '<p>You can now head over to <a href="https://reg.ntpc.wtf/login">the members page</a> and log'
+                     '<p>Your payment ID is <b>' + code + '</b>. Use it as the variable symbol when sending your payment.</p>'
+                     '<p>Please send <b>1200 CZK</b> (or 46 EUR) to a bank account number <b>2200041594/2010</b> (FIO Bank). (Please see below for international and EUR payments)</p>'
+                     '<p>If you do not want to stay for the whole time, please contact <a href="mailto:snajpa@snajpa.net">snajpa@snajpa.net</a>'
+                     '<p>You can now go to <a href="https://reg.ntpc.wtf/login">the members page</a> and log'
                      'in with your email and password to review your details.</p>'
-                     '<p>Also, please head over to <a href="https://lists.ntpc.wtf/mailman/listinfo/pub">NTPC Mailing List</a>'
-                     ' and register there to receive notifications regarding the event.</p>',
+                     '<p>Also, please visit <a href="https://lists.ntpc.wtf/mailman/listinfo/pub">NTPC Mailing List</a>'
+                     ' and register there to receive notifications regarding the event.</p>'
+                     '<hr>'
+                     '<p>If you are paying in EUR, please use the Slovak ccount with number 2200041594/8330 (FIO Bank)</p>'
+                     '<p><b>International payment details:</b></p>'
+                     '<p><b>IBAN CZ:</b> CZ0420100000002200041594<br>'
+                     '<b>BIC: FIOBCZPPXXX</b><br>'
+                     '<b>IBAN SK:</b> SK1583300000002200041594<br>'
+                     '<b>BIC SK:</b> FIOZSKBA</p>',
+        message='Welcome to NTPC!\r\n\r\n'
+                'You have been successfully registered to NTPC!\r\n'
+                'Your payment ID is ' + code + '\r\n'
+                'Please send 1200 CZK (or 46 EUR) to a bank account number 2200041594/2010 (FIO Bank). (Please see below for international and EUR payments)\r\n'
+                'If you do not want to stay for the whole time, please contact snajpa@snajpa.net\r\n'
+                'You can now go to https://reg.ntpc.wtf/login and log in'
+                'with your email and password to review your details.\r\n'
+                'Also, please visit https://lists.ntpc.wtf/mailman/listinfo/pub '
+                'and register there to receive notifications regarding the event.\r\n'
+                '\r\n'
+                'If you are paying in EUR, please use the Slovak ccount with number 2200041594/8330 (FIO Bank)\r\n'
+                'International payment details:\r\n'
+                'IBAN CZ: CZ0420100000002200041594\r\n'
+                'BIC: FIOBCZPPXXX\r\n'
+                'IBAN SK: SK1583300000002200041594\r\n'
+                'BIC SK: FIOZSKBA\r\n',
         from_email='noreply@ntpc.wtf',
         recipient_list=[email],
         fail_silently=False,
